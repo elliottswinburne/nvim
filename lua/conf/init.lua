@@ -1,8 +1,6 @@
 require "conf.options"
 require "conf.keymap"
 require "conf.packages"
-require "conf.plugins.dracula"
-require "conf.plugins.oil"
 require "conf.plugins.telescope"
 require "conf.plugins.treesitter"
 require "conf.plugins.autopair"

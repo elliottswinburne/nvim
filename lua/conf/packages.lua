@@ -3,9 +3,7 @@ local gh = function(repo)
 end
 
 vim.pack.add({
-  gh("Mofiqul/dracula.nvim"),
   gh("nvim-tree/nvim-web-devicons"),
-  gh("stevearc/oil.nvim"),
   { src = gh("nvim-telescope/telescope.nvim"), version = "0.1.8" },
   gh("nvim-lua/plenary.nvim"),
   { src = gh("nvim-treesitter/nvim-treesitter"), version = "main" },

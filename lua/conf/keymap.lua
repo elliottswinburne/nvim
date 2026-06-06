@@ -14,6 +14,9 @@ map("n", "<C-j>", "<C-w>j", opts)
 map("n", "<C-k>", "<C-w>k", opts)
 map("n", "<C-l>", "<C-w>l", opts)
 
+-- file explorer (netrw)
+map("n", "<leader>e", "<cmd>Lexplore<CR>", opts)
+
 -- editor actions
 map("n", "<leader>w", "<cmd>write<CR>", opts)
 map("n", "<leader>q", "<cmd>bdelete<CR>", opts)

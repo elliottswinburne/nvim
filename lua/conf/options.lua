@@ -75,13 +75,13 @@ vim.api.nvim_create_autocmd("FileChangedShellPost", {
 	group = "AutoReadFile",
 	pattern = "*",
 	callback = function()
-		vim.notify("File changed on disk — buffer reloaded", vim.log.levels.WARN)
+		vim.notify("File changed on disk - buffer reloaded", vim.log.levels.WARN)
 	end,
 })
 
 vim.opt.shortmess:append "c"
 
-vim.opt.guifont = "Google Sans Code:h11"
+vim.opt.guifont = "FiraCode Nerd Font"
 
 if vim.fn.has("win32") == 1 then
 	vim.opt.shell = "powershell.exe"

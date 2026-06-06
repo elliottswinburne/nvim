@@ -1,4 +1,8 @@
-require("telescope").setup({})
+require("telescope").setup({
+  defaults = {
+    preview = { treesitter = false },
+  },
+})
 
 local builtin = require("telescope.builtin")
 
