@@ -2,7 +2,7 @@ local options = {
   autoread = true,
 	backup = false,
 	clipboard = "unnamedplus",
-	cmdheight = 2,
+	cmdheight = 0,
 	completeopt = { "menuone", "noselect" },
 	conceallevel = 0,
 	fileencoding = "utf-8",
@@ -52,15 +52,17 @@ vim.api.nvim_create_autocmd("FileType", {
 	group = "FileTypeSpecific",
 })
 
-vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
+vim.cmd("autocmd BufEnter * set formatoptions-=cro")
+-- Remove these flags when opening buffers:
 -- c - auto wrap comments using the current textwidth
 -- r - auto continue a comment when you press Enter in Insert mode
 -- o - auto insert the comment leader when using o or O to open a new line
 
 vim.opt.shortmess:append "c"
 
+-- if on Windows, use powershell 7
 if vim.fn.has("win32") == 1 then
-	vim.opt.shell = "powershell.exe"
+	vim.opt.shell = "pwsh"
 	vim.opt.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command"
 	vim.opt.shellquote = ""
 	vim.opt.shellxquote = ""
