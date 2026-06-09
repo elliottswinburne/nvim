@@ -22,8 +22,6 @@ end, opts)
 -- editor actions
 map("n", "<leader>w", "<cmd>write<CR>", opts)
 map("n", "<leader>q", "<cmd>bdelete<CR>", opts)
-map("n", "<leader>h", "<cmd>bprevious<CR>", opts)
-map("n", "<leader>l", "<cmd>bnext<CR>", opts)
 map("n", "K", vim.lsp.buf.hover, opts)
 map("n", "[d", vim.diagnostic.goto_prev, opts)
 map("n", "]d", vim.diagnostic.goto_next, opts)
@@ -46,23 +44,10 @@ map("n", "<Esc>", "<cmd>nohlsearch<CR>", opts)
 map("v", "<", "<gv", opts)
 map("v", ">", ">gv", opts)
 
--- move selected text
-map("v", "<A-j>", ":m .+1<CR>==", opts)
-map("v", "<A-k>", ":m .-2<CR>==", opts)
-map("v", "p", '"_dP', opts)
-
--- visual block
-map("x", "J", ":m '>+1<CR>gv==gv", opts)
-map("x", "K", ":m '<-2<CR>gv==gv", opts)
+-- visual mode
 map("x", "<A-j>", ":move '>+1<CR>gv=gv", opts)
 map("x", "<A-k>", ":move '<-2<CR>gv=gv", opts)
 map("x", "p", '"_dP', opts)
-
--- comments
-map("n", "gc", function()
-  return vim.v.count == 0 and "gcc" or "gc"
-end, { expr = true, remap = true, silent = true })
-map("x", "gc", "gc", { remap = true, silent = true })
 
 --terminal navigation
 map("t", "<C-h>", "<C-\\><C-N><C-w>h", opts)
