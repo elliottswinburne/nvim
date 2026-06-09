@@ -27,6 +27,7 @@ end
 
 -- open nvim with most recent file, this might break piping into nvim
 vim.api.nvim_create_autocmd("VimEnter", {
+  nested = true,
   callback = function()
     if vim.fn.argc() > 0 then
       return
