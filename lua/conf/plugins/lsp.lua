@@ -28,7 +28,7 @@ vim.lsp.enable("clangd")
 -- mason installs and auto-enables managed servers
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "lua_ls", "pyright" },
+  ensure_installed = { "lua_ls", "pyright", "html" },
 })
 
 -- completion
